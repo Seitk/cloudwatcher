@@ -1,6 +1,6 @@
 # cloudwatcher
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 [![CircleCI](https://circleci.com/gh/Seitk/cloudwatcher/tree/master.svg?style=shield)](https://circleci.com/gh/Seitk/cloudwatcher/tree/master)
 [![Coverage Status](https://coveralls.io/repos/github/Seitk/cloudwatcher/badge.svg?branch=master)](https://coveralls.io/github/Seitk/cloudwatcher?branch=master)
 [![npm version](https://badge.fury.io/js/cloudwatcher.svg)](https://badge.fury.io/js/cloudwatcher)
