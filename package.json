@@ -1,10 +1,10 @@
 {
   "name": "cloudwatcher",
   "version": "0.0.1",
-  "description": "Just the CloudWatch logs you needed",
+  "description": "The missing tail function of AWS CloudWatch Logs",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
     "yargs": "^11.0.0"
   },
   "devDependencies": {
+    "coveralls": "^3.0.1",
     "jest": "^23.1.0",
     "jest-mock-now": "^1.2.0"
   }
