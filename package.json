@@ -1,6 +1,6 @@
 {
   "name": "cloudwatcher",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "The missing tail function of AWS CloudWatch Logs",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,10 @@
       "lib/**/*.js"
     ]
   },
+  "bin": {
+    "cloudwatcher": "./bin/cloudwatcher.js"
+  },
+  "preferGlobal": true,
   "keywords": [
     "aws",
     "cloudwatch",
