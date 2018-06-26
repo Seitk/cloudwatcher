@@ -35,7 +35,7 @@ describe(`tail`, () => {
     const latestReadableTime = 1529794463056
     const events = [
       { message: 'Testing message 1', timestamp: latestReadableTime, isReadable: true, print: printReadableMessage },
-      { message: 'Testing message 1', timestamp: 1529794454739 }
+      { message: 'Testing message 1', timestamp: 1519794454739 }
     ]
     const filterLogEvents = jest.fn()
     filterLogEvents.call = jest.fn().mockImplementation(() => {
@@ -58,6 +58,21 @@ describe(`tail`, () => {
       }),
       latestReadableTime + 1
     )
+  })
+
+  describe(`when calling tail with startTime`, () => {
+    test(`tails logs from given startTime`, async () => {
+      const continueWithInternal = require(`${process.cwd()}/lib/modules/continueWithInternal`).mockImplementation(jest.fn()).mockReset()
+      const filterLogEvents = jest.fn()
+      filterLogEvents.call = jest.fn().mockImplementation(() => { return Promise.resolve({ events: [] }) })
+      const logGroup = new LogGroup({ cloudWatch: { filterLogEvents }, group: {} })
+
+      await logGroup.tail({ startTime: Date.now() })
+      expect(filterLogEvents.call).toHaveBeenCalledWith(
+        expect.objectContaining({ filterLogEvents: expect.anything() }),
+        expect.objectContaining({ startTime: Date.now() })
+      )
+    })
   })
 
   describe(`when no readable message available`, () => {
