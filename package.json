@@ -4,7 +4,7 @@
   "description": "The missing tail function of AWS CloudWatch Logs",
   "main": "index.js",
   "scripts": {
-    "test": "jest && cat ./coverage/lcov.info | coveralls"
+    "test": "standard 'lib/**/*.js' && jest && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
   "devDependencies": {
     "coveralls": "^3.0.1",
     "jest": "^23.1.0",
-    "jest-mock-now": "^1.2.0"
+    "jest-mock-now": "^1.2.0",
+    "standard": "^11.0.1"
   }
 }

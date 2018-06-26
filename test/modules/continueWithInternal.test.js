@@ -11,13 +11,12 @@ describe(`continueWithInternal`, () => {
       pollingInterval: 5000
     }
     const startTime = Date.now()
-    const tail = { call: jest.fn() }
+    const tail = jest.fn()
     const logGroup = { tail }
     continueWithInternal(logGroup, options, startTime)
     jest.runAllTimers()
 
-    expect(tail.call).toHaveBeenCalledWith(
-      logGroup,
+    expect(tail).toHaveBeenCalledWith(
       expect.objectContaining({
         startTime: Date.now()
       })
@@ -27,13 +26,12 @@ describe(`continueWithInternal`, () => {
 
   describe(`when startTime is not given`, () => {
     test(`continues with current time`, async () => {
-      const tail = { call: jest.fn() }
+      const tail = jest.fn()
       const logGroup = { tail }
       continueWithInternal(logGroup)
       jest.runAllTimers()
 
-      expect(tail.call).toHaveBeenCalledWith(
-        expect.anything(),
+      expect(tail).toHaveBeenCalledWith(
         expect.objectContaining({
           startTime: Date.now()
         })
