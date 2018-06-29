@@ -4,7 +4,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/Seitk/cloudwatcher/badge.svg?branch=master)](https://coveralls.io/github/Seitk/cloudwatcher?branch=master)
 [![npm version](https://badge.fury.io/js/cloudwatcher.svg)](https://badge.fury.io/js/cloudwatcher)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE) [![Greenkeeper badge](https://badges.greenkeeper.io/Seitk/cloudwatcher.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/Seitk/cloudwatcher.svg)](https://greenkeeper.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
   
 ## Installation
   
