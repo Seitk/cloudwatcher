@@ -6,7 +6,7 @@ const { NotFoundError } = require('./lib/Errors')
 module.exports = {
   tail: (options={}) => {
     const manager = new GroupManager(options.include.map((include) => {
-      const parts = include.split('::')
+      const parts = include.split(':')
       return { profile: parts[0], region: parts[1] }
     }))
     console.log("Loading log groups...")

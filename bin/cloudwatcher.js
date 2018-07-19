@@ -11,24 +11,27 @@ require('yargs')
     })
     yargs.positional('include', {
       type: 'string',
-      describe: 'configuration of AWS credentials and region in [PROFILE::REGION] format. E.g. default::ap-southeast-1'
+      describe: 'configuration of AWS credentials and region in [PROFILE:REGION] format. E.g. default:ap-southeast-1'
     }).coerce('include', val => {
       const { ArgumentsError } = require('../lib/Errors')
       const checkValue = (v) => {
-        if (!v || v.split('::').length !== 2) {
+        if (!v || (v.split(':').length !== 2 && v.split('::').length !== 2)) {
           throw new ArgumentsError('Invalid argument [include]')
         }
       }
       if (val instanceof Array) {
-        val.forEach((v) => { checkValue(v) })
+        val.map(v => {
+          checkValue(v)
+          return v.replace('::', ':')
+        })
         return val
       } else {
         checkValue(val)
-        return [val]
+        return [val.replace('::', ':')]
       }
     })
     yargs.demandOption(['include'], 'Missing arguments, check help for more detail')
-  }, function (argv) {
+  }, (argv) => {
     const filePath = path.resolve(__dirname, '../index.js')
     const { groupName, include } = argv
     require(filePath).tail({ groupName, include })

@@ -15,9 +15,9 @@ describe(`constructor`, () => {
 
   test(`checks given configurations`, async () => {
     expect(Object.keys(subject)).toEqual([
-      'profile-name-1::ap-southeast-1',
-      'profile-name-2::ap-southeast-1',
-      'profile-name-1::us-west-1',
+      'profile-name-1:ap-southeast-1',
+      'profile-name-2:ap-southeast-1',
+      'profile-name-1:us-west-1',
     ])
   })
 
@@ -49,12 +49,12 @@ describe(`groups`, () => {
         case 'token-1':
           return Promise.resolve({ logGroups: [7, 8].map(seedLogGroup) })
       }
-      switch(`${cloudwatch.config.credentials.profile}::${cloudwatch.config.region}`) {
-        case 'profile-name-1::ap-southeast-1':
+      switch(`${cloudwatch.config.credentials.profile}:${cloudwatch.config.region}`) {
+        case 'profile-name-1:ap-southeast-1':
           return Promise.resolve({ logGroups: [1].map(seedLogGroup) })
-        case 'profile-name-2::ap-southeast-1':
+        case 'profile-name-2:ap-southeast-1':
           return Promise.resolve({ logGroups: [2, 3, 4].map(seedLogGroup) })
-        case 'profile-name-1::us-west-1':
+        case 'profile-name-1:us-west-1':
           return Promise.resolve({ logGroups: [5, 6].map(seedLogGroup) })
       }
     })
