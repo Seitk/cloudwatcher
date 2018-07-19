@@ -25,17 +25,17 @@ Run `cloudwatcher tail` to start tailing logs from CloudWatch, check `cloudwatch
 Use `--include` to indicate profiles and regions you are tapping into.
 
 ```bash
-$ cloudwatcher tail --include=default::ap-southeast-1 --include=another_profile::us-west-1
+$ cloudwatcher tail --include=default:ap-southeast-1 --include=another_profile:us-west-1
 ```
 
 Then cloudwatcher will find available log groups from given regions and profiles, shown with checkboxs, press enter to confirm selection.  
 You might also filter log groups with `--group-name` options, it supports filter with regex or string on log group name.  
 
 ```bash
-$ cloudwatcher tail --include=default::ap-southeast-1 --group-name=aws
+$ cloudwatcher tail --include=default:ap-southeast-1 --group-name=aws
 ? Select the log groups to tail (Press <space> to select, <a> to toggle all, <i> to invert selection)
- ◯ default::ap-southeast-1::/aws/aes/domains/api/logs
- ◯ default::ap-southeast-1::/aws/lambda/LambdaFunction1
+ ◯ default:ap-southeast-1:/aws/aes/domains/api/logs
+ ◯ default:ap-southeast-1:/aws/lambda/LambdaFunction1
 ```
 
 Then output are streamed to your console, refreshing in 2 seconds interval.
