@@ -4,7 +4,7 @@ describe(`constructor`, () => {
   const message = new Message({ message: '2018-06-24 00:08:57\tREQUEST_ID\tTesting message 1', timestamp: 1529794454739 })
 
   test(`unpack payload and initialize methods`, async () => {
-    expect(message).toHaveProperty('_event')
+    expect(message).toHaveProperty('event')
   })
 })
 

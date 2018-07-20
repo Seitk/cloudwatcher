@@ -167,7 +167,7 @@ describe(`tail`, () => {
       { config: { region: 'ap-southeast-1', profile: 'profile-name-1' }, group: { logGroupName: '/aws/ecs/api/logs' } }
     ]
     const groupManager = new GroupManager([])
-    const result = await groupManager.tail(logGroups)
+    const result = await GroupManager.tail(logGroups)
     expect(LogGroup).toHaveBeenCalledWith(expect.objectContaining({ group: expect.any(Object) }))
     expect(tail).toHaveBeenCalledTimes(logGroups.length)
   })

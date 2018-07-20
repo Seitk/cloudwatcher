@@ -48,7 +48,7 @@ module.exports = {
           ])
       })
       .then(res => {
-        manager.tail(res.logGroups)
+        GroupManager.tail(res.logGroups)
       })
       .catch(e => {
         console.error("Error occurred")

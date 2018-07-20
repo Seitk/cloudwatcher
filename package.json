@@ -4,7 +4,7 @@
   "description": "The missing tail function of AWS CloudWatch Logs",
   "main": "index.js",
   "scripts": {
-    "test": "standard 'lib/**/*.js' && jest && cat ./coverage/lcov.info | coveralls"
+    "test": "eslint ./lib && jest && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -42,8 +42,10 @@
   },
   "devDependencies": {
     "coveralls": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
     "jest": "^23.1.0",
-    "jest-mock-now": "^1.2.0",
-    "standard": "^11.0.1"
+    "jest-mock-now": "^1.2.0"
   }
 }
