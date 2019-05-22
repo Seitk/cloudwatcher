@@ -39,7 +39,8 @@
     "child-process-promise": "^2.2.1",
     "inquirer": "^6.0.0",
     "yargs": "^13.1.0",
-    "merge": ">=1.2.1"
+    "merge": ">=1.2.1",
+    "extend": ">=3.0.2"
   },
   "devDependencies": {
     "coveralls": "^3.0.1",
@@ -47,6 +48,7 @@
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
     "jest": "^23.1.0",
-    "jest-mock-now": "^1.2.0"
+    "jest-mock-now": "^1.2.0",
+    "lodash": ">=4.17.11"
   }
 }
