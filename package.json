@@ -35,7 +35,7 @@
   "homepage": "https://github.com/seitk/cloudwatcher#readme",
   "dependencies": {
     "chalk": "^3.0.0",
-    "aws-sdk": "^2.639.0",
+    "aws-sdk": "^2.660.0",
     "child-process-promise": "^2.2.1",
     "yargs": "^14.0.0",
     "inquirer": "^7.0.0",
