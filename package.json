@@ -34,10 +34,10 @@
   },
   "homepage": "https://github.com/seitk/cloudwatcher#readme",
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "aws-sdk": "^2.688.0",
     "child-process-promise": "^2.2.1",
-    "yargs": "^14.0.0",
+    "yargs": "^15.3.1",
     "inquirer": "^7.0.0",
     "merge": ">=1.2.1",
     "extend": ">=3.0.2",
