@@ -51,7 +51,7 @@
     "eslint": "^5.14.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "jest": "^23.1.0",
+    "jest": "^29.3.1",
     "jest-mock-now": "^1.2.0",
     "lodash": ">=4.17.11",
     "eslint-utils": ">=1.4.1"
